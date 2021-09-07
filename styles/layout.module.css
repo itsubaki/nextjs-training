@@ -1,0 +1,64 @@
+.container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main {
+  width: 70%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile {
+  margin-right: 36px;
+  margin-bottom: 16px;
+}
+
+.stats {
+  margin-top: 24px;
+  margin-right: 2%;
+}
+
+.pinned {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    flex-basis: 80%;
+  }
+  .profile {
+    margin-left: 16px;
+    flex-basis: 20%;
+  }
+}
+
+/* iPhone Xs */
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 0.5rem;
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+  }
+  .profile {
+    margin-left: 8px;
+    align-items: flex-start;
+  }
+  .stats {
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: #161b22;
+  }
+  .pinned {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

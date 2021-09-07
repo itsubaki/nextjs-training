@@ -1,0 +1,13 @@
+.heading {
+  font-size: 1.5rem;
+}
+
+.link {
+  color: #58a6ff;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  text-decoration: underline;
+}
