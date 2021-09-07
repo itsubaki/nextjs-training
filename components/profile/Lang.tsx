@@ -35,6 +35,8 @@ export function Color(language: string) {
             return <span key={language} className={style.python_color}></span>
         case "OpenQASM":
             return <span key={language} className={style.openqasm_color}></span>
+        case "Rust":
+            return <span key={language} className={style.rust_color}></span>
         case "Other":
             return <span key={language} className={style.other_color}></span>
         default:
