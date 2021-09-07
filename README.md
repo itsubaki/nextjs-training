@@ -1,4 +1,4 @@
-# itsubaki.dev
+# nextjs-training
 
 ```sh
 $ export PATH=${PATH}:${HOME}/.nodebrew/current/bin
