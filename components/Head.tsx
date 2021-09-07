@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 export const login: string = "itsubaki"
-export const siteTitle: string = `${login}.dev`
+export const siteTitle: string = `nextjs-training`
 
 export function HTMLHead({ children }: any) {
     return (
