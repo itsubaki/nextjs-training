@@ -6,6 +6,7 @@ export async function getProfile(login: string): Promise<Profile> {
   ).then((res) => {
     return res.json();
   });
+
   profile.twitter_url = `https://twitter.com/${encodeURI(
     profile.twitter_username
   )}`;
