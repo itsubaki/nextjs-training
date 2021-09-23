@@ -3,7 +3,7 @@ import { useSearch } from "hooks/search";
 import { Profile as ProfileIF } from "models/profile";
 import { Repository } from "models/repository";
 import { getProfile } from "functions/profile";
-import { getRepositories, getPinned } from "functions/repository";
+import { getRepositories, getPinnedList } from "functions/repository";
 import { HTMLHead as Head, login, siteTitle } from "components/Head";
 import { Header } from "components/Header";
 import { Profile } from "components/profile/Profile";
@@ -47,7 +47,7 @@ export default function Index({
   );
 }
 
-export function MainPage({
+function MainPage({
   profile,
   repos,
 }: {
@@ -73,7 +73,7 @@ export function MainPage({
   }
 }
 
-export function Searched({ repos }: { repos: Repository[] }) {
+function Searched({ repos }: { repos: Repository[] }) {
   const [searched, setSearch] = useSearch(repos);
 
   return (
@@ -84,7 +84,7 @@ export function Searched({ repos }: { repos: Repository[] }) {
   );
 }
 
-export function Overview({
+function Overview({
   profile,
   repos,
 }: {
@@ -97,13 +97,13 @@ export function Overview({
         <Stats login={profile.login} />
       </div>
       <div className={style.pinned}>
-        <PinnedList repos={getPinned(repos)} />
+        <PinnedList repos={getPinnedList(repos)} />
       </div>
     </>
   );
 }
 
-export function Packages() {
+function Packages() {
   return (
     <>
       <p>Get started with GitHub Packages</p>
@@ -111,7 +111,7 @@ export function Packages() {
   );
 }
 
-export function Projects() {
+function Projects() {
   return (
     <>
       <p>You don&#39;t have any projects yet.</p>

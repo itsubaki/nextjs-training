@@ -3,7 +3,7 @@ import { Repository } from "models/repository";
 import { Color } from "components/profile/Lang";
 import style from "styles/profile/pinned.module.css";
 
-export function Pinned({ repo }: { repo: Repository }) {
+export function PinnedItem({ repo }: { repo: Repository }) {
   return (
     <div key={repo.id} className={style.item}>
       <h3>

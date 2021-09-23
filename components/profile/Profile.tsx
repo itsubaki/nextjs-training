@@ -28,13 +28,13 @@ export function Profile({ profile }: { profile: ProfileIF }) {
       </div>
 
       <div>
-        <VCard profile={profile} />
+        <Metadata profile={profile} />
       </div>
     </div>
   );
 }
 
-export function VCard({ profile }: { profile: ProfileIF }) {
+function Metadata({ profile }: { profile: ProfileIF }) {
   return (
     <>
       <p>

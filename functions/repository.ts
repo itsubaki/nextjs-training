@@ -25,7 +25,7 @@ export async function getRepositories(login: string): Promise<Repository[]> {
   return repos;
 }
 
-export function getPinned(repos: Repository[]): Repository[] {
+export function getPinnedList(repos: Repository[]): Repository[] {
   // TODO use api
   const names: string[] = [
     "q",

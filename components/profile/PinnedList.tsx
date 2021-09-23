@@ -1,5 +1,5 @@
 import { Repository } from "models/repository";
-import { Pinned } from "components/profile/Pinned";
+import { PinnedItem } from "components/profile/PinnedItem";
 import style from "styles/profile/pinnedlist.module.css";
 
 export function PinnedList({ repos }: { repos: Repository[] }) {
@@ -18,7 +18,7 @@ export function PinnedList({ repos }: { repos: Repository[] }) {
         {repos.map((repo: Repository) => {
           return (
             <div key={repo.id} className={style.item}>
-              <Pinned repo={repo} />
+              <PinnedItem repo={repo} />
             </div>
           );
         })}
