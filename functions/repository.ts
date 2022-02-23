@@ -33,7 +33,7 @@ export function getPinnedList(repos: Repository[]): Repository[] {
     "gostream",
     "gostruct",
     "rsa",
-    "cracking-the-coding-interview",
+    "shor",
   ];
 
   const pinned: Repository[] = repos.filter(
