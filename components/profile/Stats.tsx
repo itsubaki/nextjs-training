@@ -1,4 +1,3 @@
-import Image from "next/image";
 import style from "styles/profile/stats.module.css";
 
 export function Stats({ login }: { login: string }) {
@@ -13,12 +12,7 @@ export function Stats({ login }: { login: string }) {
         <span className={style.extension}>.md</span>
       </p>
       <h3>Hi there 👋</h3>
-      <Image
-        src={url}
-        width={495}
-        height={165}
-        alt={login + "'s github stats"}
-      />
+      <img src={url} width={495} height={165} alt={login + "'s github stats"} />
     </div>
   );
 }
