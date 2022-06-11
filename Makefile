@@ -12,16 +12,14 @@ start: build
 	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run start
 
 build:
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run build
+	npm run build
 
 install:
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm install --save next
+	npm install --save next
 
 upgrade:
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm install next@latest react@latest react-dom@latest cypress@latest
-
-update:
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm-check-updates -u; npm install
+	npm-check-updates -u
+	npm install next@latest react@latest react-dom@latest cypress@latest
 
 test:
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run cypress:headless
+	npm run cypress:headless
