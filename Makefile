@@ -1,22 +1,27 @@
 SHELL := /bin/bash
+DATE := $(shell date +%Y%m%d-%H:%M:%S)
+HASH := $(shell git rev-parse HEAD)
 
 run: lint
-	npm run dev
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run dev
 
 lint:
-	npm run lint
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run lint
 
 start: build
-	npm run start
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run start
 
 build:
-	npm run build
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run build
 
 install:
-	npm install --save next
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm install --save next
 
 upgrade:
-	npm install
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm install next@latest react@latest react-dom@latest cypress@latest
+
+update:
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm-check-updates -u; npm install
 
 test:
-	npm run cypress:headless
+	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run cypress:headless
