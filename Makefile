@@ -3,13 +3,13 @@ DATE := $(shell date +%Y%m%d-%H:%M:%S)
 HASH := $(shell git rev-parse HEAD)
 
 run: lint
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run dev
+	npm run dev
 
 lint:
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run lint
+	npm run lint
 
 start: build
-	PATH=${PATH}:${HOME}/.nodebrew/current/bin; npm run start
+	npm run start
 
 build:
 	npm run build
