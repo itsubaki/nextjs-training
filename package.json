@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cypress": "cypress open",
-    "cypress:headless": "cypress run"
+    "cypress": "cypress open --config-file=cypress.config.ts",
+    "cypress:headless": "cypress run --config-file=cypress.config.ts"
   },
   "dependencies": {
     "next": "^12.1.6",
