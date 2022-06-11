@@ -6,7 +6,7 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [ubuntu-latest]
+        platform: []
 
     runs-on: ${{ matrix.platform }}
 
