@@ -30,11 +30,13 @@ export function getPinnedList(repos: Repository[]): Repository[] {
   const names: string[] = [
     "q",
     "qasm",
-    "gostream",
-    "gostruct",
-    "rsa",
+    "quasar",
+    "neu",
     "shor",
+    "rsa",
   ];
+
+
 
   const pinned: Repository[] = repos.filter(
     (repo) => names.indexOf(repo.name) > -1
