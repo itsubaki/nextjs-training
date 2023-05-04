@@ -1,4 +1,4 @@
-# nextjs-training
+# nextjs12-training
 
 ```sh
 $ export PATH=${PATH}:${HOME}/.nodebrew/current/bin
