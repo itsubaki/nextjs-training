@@ -1,15 +1,8 @@
-module.exports = {
-  reactStrictMode: true,
-  images: {
-    domains: ["github-readme-stats.vercel.app"],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/me",
-        permanent: true,
-      },
-    ];
-  },
-};
+}
+
+module.exports = nextConfig

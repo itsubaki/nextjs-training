@@ -1,15 +1,16 @@
-# nextjs12-training
+# nextjs13-training
 
-```sh
-$ export PATH=${PATH}:${HOME}/.nodebrew/current/bin
-$ npm install --save next
-$ npx create-next-app --typescript
-$ npm run dev
-
-> nextjs-traning@0.0.1
-> next dev
-
-ready - started server on 0.0.0.0:3000, url: http://localhost:3000
-info  - Using webpack 5. Reason: Enabled by default https://nextjs.org/docs/messages/webpack5
-event - compiled successfully
+```shell
+% npx create-next-app@latest
+Need to install the following packages:
+  create-next-app@13.4.0
+Ok to proceed? (y)
+✔ What is your project named? … nextjs13-training
+✔ Would you like to use TypeScript with this project? … No / Yes
+✔ Would you like to use ESLint with this project? … No / Yes
+✔ Would you like to use Tailwind CSS with this project? … No / Yes
+✔ Would you like to use `src/` directory with this project? … No / Yes
+✔ Use App Router (recommended)? … No / Yes
+✔ Would you like to customize the default import alias? … No / Yes
+Creating a new Next.js app in /Users/tsubaki/nextjs/nextjs-training/nextjs13-training.
 ```
