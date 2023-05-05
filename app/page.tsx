@@ -15,7 +15,6 @@ export default async function Page() {
 
   return (
     <div>
-      <h1>repository</h1>
       <div>
         {repos.map((repo) => {
           return (
