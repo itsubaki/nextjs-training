@@ -13,3 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Install nodejs
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        runs: make install
+
+      - name: Lint
+        runs: make lint

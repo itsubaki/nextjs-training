@@ -1,10 +1,11 @@
+import { use } from "react";
 import { Repository } from "models/repository";
 import { getRepositories } from "functions/repository";
 
 const login: string = "itsubaki";
 
-export default async function Page() {
-  const repos: Repository[] = await getRepositories(login);
+export default function Page() {
+  const repos: Repository[] = use(getRepositories(login));
   repos.sort((a: Repository, b: Repository) => {
     if (a.pushed_at < b.pushed_at) {
       return 1;
