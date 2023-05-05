@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: Install dependencies
-        runs: make install
+        run: make install
 
       - name: Lint
-        runs: make lint
+        run: make lint
