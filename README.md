@@ -16,4 +16,4 @@ event - compiled successfully
 
 # links
 
-- [nextjs13](https://github.com/itsubaki/nextjs-training/tree/nextjs13)
+- [nextjs13-training](https://github.com/itsubaki/nextjs-training/tree/nextjs13)
