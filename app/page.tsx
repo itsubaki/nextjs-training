@@ -16,7 +16,6 @@ export default function Page() {
 
   return (
     <div>
-      <div>
         {repos.map((repo) => {
           return (
             <div key={repo.id}>
@@ -24,7 +23,6 @@ export default function Page() {
             </div>
           );
         })}
-      </div>
     </div>
   );
 }
