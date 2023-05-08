@@ -1,5 +1,11 @@
 # nextjs12-training
 
+ - Using `Pages Router`
+ - `@vercel/kv`
+ - `@vercel/postgres`
+ - `@media` query
+ - e2e test with `Cypress`
+
 ```sh
 $ export PATH=${PATH}:${HOME}/.nodebrew/current/bin
 $ npm install --save next
