@@ -1,5 +1,9 @@
 # nextjs13-training
 
+- Using `App Router`
+- `@vercel/kv`
+- `@vervel/postgres`
+
 ```shell
 % npx create-next-app@latest
 Need to install the following packages:
