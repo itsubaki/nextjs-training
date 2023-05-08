@@ -1,13 +1,21 @@
 import kv from "@vercel/kv";
 import { NextResponse } from "next/server";
 
+// https://nextjs.org/docs/app/building-your-application/routing/router-handlers
 export async function GET() {
-  await kv.json.set("profile", "$", {
+  const value = await kv.json.get("profile", "$");
+  if (value) {
+    return NextResponse.json(value);
+  }
+
+  const profile = {
     name: "itsubaki",
     github: "https://github.com/itsubaki",
     timestamp: Date.now(),
-  });
+  };
 
-  const value = await kv.json.get("profile", "$");
-  return NextResponse.json(value);
+  await kv.json.set("profile", "$", profile);
+  await kv.expire("profile", 60);
+
+  return NextResponse.json(profile);
 }
