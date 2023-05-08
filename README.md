@@ -14,3 +14,8 @@ Ok to proceed? (y)
 ✔ Would you like to customize the default import alias? … No / Yes
 Creating a new Next.js app in /Users/tsubaki/nextjs/nextjs-training/nextjs13-training.
 ```
+
+```shell
+% npm install @vercel/postgres
+% npm install @vercel/kv
+```
