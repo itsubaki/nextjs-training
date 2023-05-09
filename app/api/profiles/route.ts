@@ -3,19 +3,25 @@ import { NextResponse } from "next/server";
 
 // https://nextjs.org/docs/app/building-your-application/routing/router-handlers
 export async function GET() {
-  const value = await kv.json.get("profile", "$");
-  if (value) {
-    return NextResponse.json(value);
-  }
-
   const profile = {
     name: "itsubaki",
     github: "https://github.com/itsubaki",
     timestamp: Date.now(),
   };
+  try {
+    await kv.set("profile", profile, { ex: 60, nx: true });
+  } catch (error) {
+    return NextResponse.json(error);
+  }
 
-  await kv.json.set("profile", "$", profile);
-  await kv.expire("profile", 60);
+  try {
+    const value = await kv.get("profile");
+    if (value) {
+      return NextResponse.json(value);
+    }
+  } catch (error) {
+    return NextResponse.json(error);
+  }
 
   return NextResponse.json(profile);
 }
