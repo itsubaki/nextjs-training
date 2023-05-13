@@ -12,7 +12,12 @@ export async function GET(
     return NextResponse.json(value);
   }
 
-  const profile = await fetch(`https://api.github.com/users/${name}`);
+  const profile = await fetch(`https://api.github.com/users/${name}`).then(
+    (res) => {
+      return res.json();
+    }
+  );
+
   await kv.set(name, profile, { ex: 60 });
   return NextResponse.json(profile);
 }
