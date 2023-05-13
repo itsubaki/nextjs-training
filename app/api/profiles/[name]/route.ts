@@ -18,6 +18,7 @@ export async function GET(
     }
   );
 
-  await kv.set(name, profile, { ex: 60 });
-  return NextResponse.json(profile);
+  const pretty = JSON.stringify(profile, null, 2);
+  await kv.set(name, pretty, { ex: 60 });
+  return NextResponse.json(pretty);
 }
