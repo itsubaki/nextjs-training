@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 // https://nextjs.org/docs/app/building-your-application/routing/router-handlers
 export async function GET() {
-  const value = await kv.json.get("profile", "$");
+  const value = await kv.get("profile");
   if (value) {
     return NextResponse.json(value);
   }
@@ -11,9 +11,9 @@ export async function GET() {
   const profile = {
     name: "itsubaki",
     github: "https://github.com/itsubaki",
-    timestamp: Date.now(),
+    timestamp: new Date().toISOString(),
   };
 
-  await kv.json.set("profile", "$", profile);
+  await kv.set("profile", profile, { ex: 60 });
   return NextResponse.json(profile);
 }
