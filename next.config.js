@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["github-readme-stats.vercel.app"],
+    domains: ["github-readme-stats.Vercel.app"],
   },
   async redirects() {
     return [
