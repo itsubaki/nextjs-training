@@ -2,7 +2,7 @@
 
 - Using `App Router`
 - `@vercel/kv`
-- `@vervel/postgres`
+- `@vercel/postgres`
 
 ```shell
 % npx create-next-app@latest
